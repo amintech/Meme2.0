@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Meme1.0
+//  Meme2.0
 //
 //  Created by  AminSaleh on 27/02/1440 AH.
 //  Copyright © 1440 AminTech. All rights reserved.
@@ -9,10 +9,10 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
-
+    var memes = [ViewController.Meme]()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

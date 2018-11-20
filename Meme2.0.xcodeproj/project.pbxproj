@@ -12,7 +12,6 @@
 		E3FB016721902C9A00DF461B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FB016521902C9A00DF461B /* Main.storyboard */; };
 		E3FB016921902CA000DF461B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FB016821902CA000DF461B /* Assets.xcassets */; };
 		E3FB016C21902CA000DF461B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FB016A21902CA000DF461B /* LaunchScreen.storyboard */; };
-		E3FB017721902CA100DF461B /* Meme1_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB017621902CA100DF461B /* Meme1_0Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +25,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E3FB015E21902C9A00DF461B /* Meme1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meme1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3FB015E21902C9A00DF461B /* Meme2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meme2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FB016121902C9A00DF461B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3FB016321902C9A00DF461B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E3FB016621902C9A00DF461B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3FB016821902CA000DF461B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3FB016B21902CA000DF461B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3FB016D21902CA000DF461B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3FB017221902CA100DF461B /* Meme1.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Meme1.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3FB017621902CA100DF461B /* Meme1_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme1_0Tests.swift; sourceTree = "<group>"; };
-		E3FB017821902CA100DF461B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3FB017221902CA100DF461B /* Meme2.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Meme2.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +56,7 @@
 		E3FB015521902C9900DF461B = {
 			isa = PBXGroup;
 			children = (
-				E3FB016021902C9A00DF461B /* Meme1.0 */,
-				E3FB017521902CA100DF461B /* Meme1.0Tests */,
+				E3FB016021902C9A00DF461B /* Meme2.0 */,
 				E3FB015F21902C9A00DF461B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,13 +64,13 @@
 		E3FB015F21902C9A00DF461B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E3FB015E21902C9A00DF461B /* Meme1.0.app */,
-				E3FB017221902CA100DF461B /* Meme1.0Tests.xctest */,
+				E3FB015E21902C9A00DF461B /* Meme2.0.app */,
+				E3FB017221902CA100DF461B /* Meme2.0Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E3FB016021902C9A00DF461B /* Meme1.0 */ = {
+		E3FB016021902C9A00DF461B /* Meme2.0 */ = {
 			isa = PBXGroup;
 			children = (
 				E3FB016121902C9A00DF461B /* AppDelegate.swift */,
@@ -84,24 +80,15 @@
 				E3FB016A21902CA000DF461B /* LaunchScreen.storyboard */,
 				E3FB016D21902CA000DF461B /* Info.plist */,
 			);
-			path = Meme1.0;
-			sourceTree = "<group>";
-		};
-		E3FB017521902CA100DF461B /* Meme1.0Tests */ = {
-			isa = PBXGroup;
-			children = (
-				E3FB017621902CA100DF461B /* Meme1_0Tests.swift */,
-				E3FB017821902CA100DF461B /* Info.plist */,
-			);
-			path = Meme1.0Tests;
+			path = Meme2.0;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E3FB015D21902C9900DF461B /* Meme1.0 */ = {
+		E3FB015D21902C9900DF461B /* Meme2.0 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E3FB017B21902CA100DF461B /* Build configuration list for PBXNativeTarget "Meme1.0" */;
+			buildConfigurationList = E3FB017B21902CA100DF461B /* Build configuration list for PBXNativeTarget "Meme2.0" */;
 			buildPhases = (
 				E3FB015A21902C9900DF461B /* Sources */,
 				E3FB015B21902C9900DF461B /* Frameworks */,
@@ -111,14 +98,14 @@
 			);
 			dependencies = (
 			);
-			name = Meme1.0;
+			name = Meme2.0;
 			productName = Meme1.0;
-			productReference = E3FB015E21902C9A00DF461B /* Meme1.0.app */;
+			productReference = E3FB015E21902C9A00DF461B /* Meme2.0.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E3FB017121902CA100DF461B /* Meme1.0Tests */ = {
+		E3FB017121902CA100DF461B /* Meme2.0Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E3FB017E21902CA100DF461B /* Build configuration list for PBXNativeTarget "Meme1.0Tests" */;
+			buildConfigurationList = E3FB017E21902CA100DF461B /* Build configuration list for PBXNativeTarget "Meme2.0Tests" */;
 			buildPhases = (
 				E3FB016E21902CA100DF461B /* Sources */,
 				E3FB016F21902CA100DF461B /* Frameworks */,
@@ -129,9 +116,9 @@
 			dependencies = (
 				E3FB017421902CA100DF461B /* PBXTargetDependency */,
 			);
-			name = Meme1.0Tests;
+			name = Meme2.0Tests;
 			productName = Meme1.0Tests;
-			productReference = E3FB017221902CA100DF461B /* Meme1.0Tests.xctest */;
+			productReference = E3FB017221902CA100DF461B /* Meme2.0Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -153,7 +140,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E3FB015921902C9900DF461B /* Build configuration list for PBXProject "Meme1.0" */;
+			buildConfigurationList = E3FB015921902C9900DF461B /* Build configuration list for PBXProject "Meme2.0" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -166,8 +153,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E3FB015D21902C9900DF461B /* Meme1.0 */,
-				E3FB017121902CA100DF461B /* Meme1.0Tests */,
+				E3FB015D21902C9900DF461B /* Meme2.0 */,
+				E3FB017121902CA100DF461B /* Meme2.0Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -206,7 +193,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3FB017721902CA100DF461B /* Meme1_0Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +201,7 @@
 /* Begin PBXTargetDependency section */
 		E3FB017421902CA100DF461B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E3FB015D21902C9900DF461B /* Meme1.0 */;
+			target = E3FB015D21902C9900DF461B /* Meme2.0 */;
 			targetProxy = E3FB017321902CA100DF461B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -362,12 +348,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BGU2635R7S;
-				INFOPLIST_FILE = Meme1.0/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Meme2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AminTech.Meme1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AminTech.Meme2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -380,12 +366,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BGU2635R7S;
-				INFOPLIST_FILE = Meme1.0/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Meme2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AminTech.Meme1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AminTech.Meme2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -408,7 +394,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meme1.0.app/Meme1.0";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meme2.0.app/Meme2.0";
 			};
 			name = Debug;
 		};
@@ -428,14 +414,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meme1.0.app/Meme1.0";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meme2.0.app/Meme2.0";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E3FB015921902C9900DF461B /* Build configuration list for PBXProject "Meme1.0" */ = {
+		E3FB015921902C9900DF461B /* Build configuration list for PBXProject "Meme2.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E3FB017921902CA100DF461B /* Debug */,
@@ -444,7 +430,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E3FB017B21902CA100DF461B /* Build configuration list for PBXNativeTarget "Meme1.0" */ = {
+		E3FB017B21902CA100DF461B /* Build configuration list for PBXNativeTarget "Meme2.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E3FB017C21902CA100DF461B /* Debug */,
@@ -453,7 +439,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E3FB017E21902CA100DF461B /* Build configuration list for PBXNativeTarget "Meme1.0Tests" */ = {
+		E3FB017E21902CA100DF461B /* Build configuration list for PBXNativeTarget "Meme2.0Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E3FB017F21902CA100DF461B /* Debug */,
