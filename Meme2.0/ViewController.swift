@@ -18,6 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
+    //Defalut attributes for the text field
     
     let memeTextAttributes:[NSAttributedString.Key: Any] = [
         NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeColor.rawValue): UIColor.black,
@@ -53,39 +54,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         unsubscribeFromKeyboardNotifications()
     }
     
-    //hide keyboard-----------------------------------------------------
-    @objc func keyboardWillHide(_ notification:Notification)
-    {
-        view.frame.origin.y = 0
-    }
-    
-    //show Keyboard------------------------------------------------------
-    @objc func keyboardWillShow(_ notification:Notification) {
-        if bottomText.isEditing{
-            view.frame.origin.y = -getKeyboardHeight(notification)
-        }else{
-            view.frame.origin.y = 0
-        }
-    }
-    
-    func subscribeToKeyboardNotifications() {
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    func unsubscribeFromKeyboardNotifications() {
-        
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    func getKeyboardHeight(_ notification:Notification) -> CGFloat {
-        
-        let userInfo = notification.userInfo
-        let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue // of CGRect
-        return keyboardSize.cgRectValue.height
-    }
     
     @IBAction func picImg(_ sender: Any) {
        let imgPicker = UIImagePickerController()
@@ -105,6 +73,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.present(imgPicker, animated: true, completion: nil)
     }
     
+    // image picker delegate implemented functions
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             imagePicked.image = img
@@ -116,6 +86,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    //text field delegate implemented functions
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.text == "TOP" || textField.text == "BOTTOM"
@@ -129,9 +101,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return false
     }
     
-    //save pic
+    //Share image with texts
     
-    
+    @IBAction func shareImage(_ sender: Any) {
+        
+        let imageTemp = save()
+        let activityVC = UIActivityViewController(activityItems: [imageTemp], applicationActivities: nil)
+        self.present(activityVC, animated: true, completion: nil)
+        
+    }
     
     //Rest image and texts
     
@@ -146,15 +124,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    //Share image with texts
-    
-    @IBAction func shareImage(_ sender: Any) {
-        
-        let imageTemp = save()
-        let activityVC = UIActivityViewController(activityItems: [imageTemp], applicationActivities: nil)
-        self.present(activityVC, animated: true, completion: nil)
-        
-    }
+    //UI share and cancel state on or off
     
     func uiShareCancelState(_ zeroOrOne: Int)
     {
@@ -167,9 +137,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             cancelButton.isEnabled = true
         }
     }
+    
 }
 
 extension ViewController {
+    
+    //save pic
     
     struct Meme {
         let topText: String
@@ -206,6 +179,44 @@ extension ViewController {
         appDelegate.memes.append(meme)
         
         return meme.memedImage
+    }
+    
+}
+
+extension ViewController {
+    
+    //hide keyboard-----------------------------------------------------
+    @objc func keyboardWillHide(_ notification:Notification)
+    {
+        view.frame.origin.y = 0
+    }
+    
+    //show Keyboard------------------------------------------------------
+    @objc func keyboardWillShow(_ notification:Notification) {
+        if bottomText.isEditing{
+            view.frame.origin.y = -getKeyboardHeight(notification)
+        }else{
+            view.frame.origin.y = 0
+        }
+    }
+    
+    func subscribeToKeyboardNotifications() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func unsubscribeFromKeyboardNotifications() {
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func getKeyboardHeight(_ notification:Notification) -> CGFloat {
+        
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        return keyboardSize.cgRectValue.height
     }
     
 }
