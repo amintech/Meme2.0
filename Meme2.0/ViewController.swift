@@ -63,13 +63,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func camPicImg(_ sender: Any) {
         let imgPicker = UIImagePickerController()
-        
         imgPicker.sourceType = UIImagePickerController.SourceType.camera
-        
         imgPicker.delegate = self
-        
         uiShareCancelState(1)
-        
         self.present(imgPicker, animated: true, completion: nil)
     }
     
@@ -86,6 +82,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    
     
     //text field delegate implemented functions
     
@@ -121,6 +119,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomText.textAlignment = NSTextAlignment.center
         bottomText.text = "BOTTOM"
         uiShareCancelState(0)
+        
+        self.dismiss(animated: true, completion: nil)
         
     }
     
@@ -177,6 +177,7 @@ extension ViewController {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
+        print(appDelegate.memes.count)
         
         return meme.memedImage
     }
