@@ -12,6 +12,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     var memes: [ViewController.Meme]! {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
@@ -22,6 +23,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "TableView"
         print(memes.count)
         // Do any additional setup after loading the view.
     }
@@ -42,11 +44,11 @@ extension TableViewController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "memeCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "memeCell") as! TableViewCellController
         let meme = self.memes[(indexPath as NSIndexPath).row]
         
-        cell.textLabel?.text = "\(meme.topText) , \(meme.bottomText)"
-        cell.imageView?.image = meme.memedImage
+        cell.labelCell.text = "\(meme.topText) , \(meme.bottomText)"
+        cell.imageCell.image = meme.memedImage
         
         return cell
         

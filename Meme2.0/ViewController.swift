@@ -105,6 +105,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let imageTemp = save()
         let activityVC = UIActivityViewController(activityItems: [imageTemp], applicationActivities: nil)
+        activityVC.completionWithItemsHandler = {
+            (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+                if completed == true {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
         self.present(activityVC, animated: true, completion: nil)
         
     }
