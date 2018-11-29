@@ -17,9 +17,9 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        showMemeImage.image = memesImage!
-        
+        if let memeimage = memesImage {
+            showMemeImage.image = memeimage
+        }
     }
     
 

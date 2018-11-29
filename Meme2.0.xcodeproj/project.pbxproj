@@ -11,6 +11,7 @@
 		E329B33E21A5FDDA006786AA /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329B33D21A5FDDA006786AA /* CollectionViewController.swift */; };
 		E329B34021A6DBEE006786AA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329B33F21A6DBED006786AA /* DetailViewController.swift */; };
 		E329B34221AAE065006786AA /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329B34121AAE065006786AA /* TableViewCellController.swift */; };
+		E329B34421ABD29B006786AA /* CollectionViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329B34321ABD29A006786AA /* CollectionViewCellController.swift */; };
 		E3FB016221902C9A00DF461B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB016121902C9A00DF461B /* AppDelegate.swift */; };
 		E3FB016421902C9A00DF461B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB016321902C9A00DF461B /* ViewController.swift */; };
 		E3FB016721902C9A00DF461B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FB016521902C9A00DF461B /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		E329B33D21A5FDDA006786AA /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		E329B33F21A6DBED006786AA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E329B34121AAE065006786AA /* TableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellController.swift; sourceTree = "<group>"; };
+		E329B34321ABD29A006786AA /* CollectionViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellController.swift; sourceTree = "<group>"; };
 		E3FB015E21902C9A00DF461B /* Meme2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meme2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FB016121902C9A00DF461B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3FB016321902C9A00DF461B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				E329B30F21A57A3F006786AA /* TabelViewController.swift */,
 				E329B34121AAE065006786AA /* TableViewCellController.swift */,
 				E329B33D21A5FDDA006786AA /* CollectionViewController.swift */,
+				E329B34321ABD29A006786AA /* CollectionViewCellController.swift */,
 				E329B33F21A6DBED006786AA /* DetailViewController.swift */,
 				E3FB016521902C9A00DF461B /* Main.storyboard */,
 				E3FB016821902CA000DF461B /* Assets.xcassets */,
@@ -200,6 +203,7 @@
 				E329B34221AAE065006786AA /* TableViewCellController.swift in Sources */,
 				E3FB016421902C9A00DF461B /* ViewController.swift in Sources */,
 				E329B34021A6DBEE006786AA /* DetailViewController.swift in Sources */,
+				E329B34421ABD29B006786AA /* CollectionViewCellController.swift in Sources */,
 				E3FB016221902C9A00DF461B /* AppDelegate.swift in Sources */,
 				E329B31021A57A3F006786AA /* TabelViewController.swift in Sources */,
 			);

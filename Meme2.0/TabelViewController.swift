@@ -23,7 +23,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "TableView"
+        //self.title = "Sent Memes"
         print(memes.count)
         // Do any additional setup after loading the view.
     }
@@ -47,7 +47,7 @@ extension TableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "memeCell") as! TableViewCellController
         let meme = self.memes[(indexPath as NSIndexPath).row]
         
-        cell.labelCell.text = "\(meme.topText) , \(meme.bottomText)"
+        cell.labelCell.text = "\(meme.topText) ... \(meme.bottomText)"
         cell.imageCell.image = meme.memedImage
         
         return cell

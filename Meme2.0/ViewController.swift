@@ -20,27 +20,40 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //Defalut attributes for the text field
     
-    let memeTextAttributes:[NSAttributedString.Key: Any] = [
-        NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeColor.rawValue): UIColor.black,
-        NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.white,
-        NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): UIFont(name: "HelveticaNeue-CondensedBlack", size: 45)!,
-        NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeWidth.rawValue): 5
+    
+    
+    func setupTextField(tf: UITextField, text: String) {
+        
+        let memeTextAttributes:[NSAttributedString.Key: Any] = [
+            NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeColor.rawValue): UIColor.black,
+            NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.white,
+            NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeWidth.rawValue): -4.0
         ]
+        
+        tf.defaultTextAttributes = memeTextAttributes
+        tf.textColor = UIColor.white
+        tf.tintColor = UIColor.white
+        tf.textAlignment = .center
+        tf.text = text
+        tf.delegate = self
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        /*
         topText.delegate = self
         bottomText.delegate = self
-        
         topText.textAlignment = NSTextAlignment.center
         topText.text = "TOP"
         bottomText.textAlignment = NSTextAlignment.center
         bottomText.text = "BOTTOM"
-        
-        topText.defaultTextAttributes = memeTextAttributes
-        bottomText.defaultTextAttributes = memeTextAttributes
-        
+ 
+        //topText.defaultTextAttributes = memeTextAttributes
+        //bottomText.defaultTextAttributes = memeTextAttributes
+        */
+        setupTextField(tf: topText, text: "TOP")
+        setupTextField(tf: bottomText, text: "BOTTOM")
         uiShareCancelState(0)
     }
     
@@ -56,17 +69,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func picImg(_ sender: Any) {
-       let imgPicker = UIImagePickerController()
-       imgPicker.delegate = self
-       present(imgPicker, animated: true, completion: nil)
+        
+        chooseImageFromCameraOrPhoto(source: .photoLibrary)
+        
     }
     
     @IBAction func camPicImg(_ sender: Any) {
-        let imgPicker = UIImagePickerController()
-        imgPicker.sourceType = UIImagePickerController.SourceType.camera
-        imgPicker.delegate = self
-        uiShareCancelState(1)
-        self.present(imgPicker, animated: true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            chooseImageFromCameraOrPhoto(source: .camera)
+        }
     }
     
     // image picker delegate implemented functions
@@ -186,6 +197,15 @@ extension ViewController {
         print(appDelegate.memes.count)
         
         return meme.memedImage
+    }
+    
+    func chooseImageFromCameraOrPhoto(source: UIImagePickerController.SourceType) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.allowsEditing = true
+        pickerController.sourceType = source
+        present(pickerController, animated: true, completion: nil)
+        uiShareCancelState(1)
     }
     
 }
